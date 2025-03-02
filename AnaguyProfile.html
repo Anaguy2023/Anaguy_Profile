@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Anaguy_Profile</title>
+        <link rel="stylesheet" href="AnaguyProfile.css">
+    </head>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cursor = document.querySelector(".custom-cursor");
+    
+            document.addEventListener("mousemove", (e) => {
+                cursor.style.left = `${e.clientX}px`;
+                cursor.style.top = `${e.clientY}px`;
+            });
+        });
+    </script>
+<style>
+    h1{
+    color: aliceblue;
+}
+h2{
+    color: aliceblue;
+}
+body{
+    background-color: rgb(0, 0, 0);
+}
+.img1 {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    width: 500px; 
+}
+.skills-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px; /* Espace entre le texte et les images */
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 80px;
+    margin: 0 15px;
+}
+/* Cache le curseur par défaut */
+body {
+    cursor: none;
+}
+
+/* Curseur rond bien visible sur fond gris */
+.custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(141, 141, 141); /* Rond noir */
+    border: 2px solid white; /* Contour blanc pour bien le voir */
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+}
+/* Effet de survol sur les images */
+img {
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+/* Quand la souris est sur une image */
+img:hover {
+    box-shadow: 0 0 10px 2px blue; /* Ajoute un contour bleu fin */
+    border-radius: 50%; /* Donne un effet arrondi */
+}
+/* Rend l'image de droite ronde */
+.img1 {
+    width: 500px; /* Ajuste la taille selon ton besoin */
+    height: 500px;
+    border-radius: 50%; /* Rend l'image parfaitement ronde */
+    object-fit: cover; /* Assure que l'image garde de bonnes proportions */
+}
+/* Applique un contour bleu fin au survol */
+img {
+    border-radius: 50%; /* Assure que toutes les images restent rondes */
+    transition: box-shadow 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+}
+
+/* Quand la souris est sur une image */
+img:hover {
+    box-shadow: 0 0 20px 2px blue; /* Ajoute un contour bleu fin */
+}
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Espace entre les logos */
+}
+
+.logo-container img {
+    height: 80px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Effet au survol */
+.logo-container img:hover {
+    transform: scale(1.1);
+}
+.projects-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.projects-title {
+    font-size: 28px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid blue;
+    padding-bottom: 5px;
+}
+.soon{
+    text-align: center;
+}
+
+</style>
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>Hello, my name is Anaguy (username).</h1>
+    <h2>If you are looking for a web developer contact me.</h2>
+    <img class="img1" type="img" src="https://avatarfiles.alphacoders.com/364/thumb-1920-364530.png">
+
+
+
+    <div class="skills-container">
+        <h2>What I know</h2>
+        <div class="logo-container">
+            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968350.png" alt="Python Logo">
+            <img src="https://cdn-icons-png.flaticon.com/128/919/919827.png" alt="HTML Logo">
+            <img src="https://cdn-icons-png.flaticon.com/128/919/919826.png" alt="CSS Logo">
+            <img src="https://cdn-icons-png.flaticon.com/128/5968/5968292.png" alt="JavaScript Logo">
+        </div>
+    </div>
+    
+
+    <div class="custom-cursor"></div>
+
+    <div class="projects-container">
+        <h2 class="projects-title">My Projects</h2>
+    </div>
+
+    <h2 class="soon">Coming soon</h2>
+
+</body>
+</html>
